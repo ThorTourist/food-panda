@@ -56,3 +56,17 @@ for (let button of buyBtns) {
     getElemnt("total-quantity").innerText = currentTotalQuantity;
   });
 }
+
+document
+  .getElementById("clear-cart-btn")
+  .addEventListener("click", function () {
+    cartConatiner = document.getElementById("cart-container");
+
+    cartConatiner.innerHTML = "";
+
+    totalPrcie = document.getElementById("total-price");
+    totalPrcie.innerHTML = 0;
+
+    totalQuantity = document.getElementById("total-quantity");
+    totalQuantity.innerHTML = 0;
+  });
